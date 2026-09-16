@@ -49,30 +49,20 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero">Home<br></a></li>
-          <li><a href="#speakers">Speakers</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#venue">Venue</a></li>
-          <li><a href="#hotels">Hotels</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="index.html">Home<br></a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="speakers.html" class="active">Speakers</a></li>
+          <li><a href="organizers.html">Organizers</a></li>
+          <li><a href="index.html#schedule">Schedule</a></li>
+          <li><a href="index.html#venue">Venue</a></li>
+          <li><a href="index.html#hotels">Hotels</a></li>
+          <li class="dropdown"><a href="#"><span>Abstract</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
+              <li><a href="index.html#abstract-submission">Abstract Submission</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
             </ul>
           </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -105,23 +95,21 @@
 
         <div class="row">
           <div class="col-md-6">
-            <img src="assets/img/speaker.jpg" alt="Speaker" class="img-fluid">
+            <img id="speakerImage" src="assets/img/speakers/speaker-1.jpeg" alt="Speaker" class="img-fluid">
           </div>
 
           <div class="col-md-6">
             <div class="details">
-              <h2>Brenden Legros</h2>
+              <h2 id="speakerName">Dr. Ayaz Mukarram Shaikh</h2>
               <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a id="speakerTwitter" href="#"><i class="bi bi-twitter"></i></a>
+                <a id="speakerFacebook" href="#"><i class="bi bi-facebook"></i></a>
+                <a id="speakerInstagram" href="#"><i class="bi bi-instagram"></i></a>
+                <a id="speakerLinkedin" href="https://www.linkedin.com" target="_blank"><i class="bi bi-linkedin"></i></a>
               </div>
-              <p>Voluptatem perferendis sed assumenda voluptatibus. Laudantium molestiae sint. Doloremque odio dolore dolore sit. Quae labore alias ea omnis ex expedita sapiente molestias atque. Optio voluptas et.</p>
-
-              <p>Aboriosam inventore dolorem inventore nam est esse. Aperiam voluptatem nisi molestias laborum ut. Porro dignissimos eum. Tempore dolores minus unde est voluptatum incidunt ut aperiam.</p>
-
-              <p>Et dolore blanditiis officiis non quod id possimus. Optio non commodi alias sint culpa sapiente nihil ipsa magnam. Qui eum alias provident omnis incidunt aut. Eius et officia corrupti omnis error vel quia omnis velit. In qui debitis autem aperiam voluptates unde sunt et facilis.</p>
+              <p id="speakerAffiliation">Faculty of Agricultural and Food Sciences and Environmental Management University of Debrecen Debrecen, Hungary</p>
+              <p id="speakerTopic">Functional Foods &amp; Nutraceutical Innovation</p>
+              <p id="speakerBio">Speaker profile details will be shown here.</p>
             </div>
           </div>
 
@@ -130,6 +118,81 @@
       </div>
 
     </section><!-- /Events Section -->
+
+    <script>
+      const speakerDetails = {
+        'ayaz-mukarram-shaikh': {
+          image: 'assets/img/speakers/speaker-1.jpeg',
+          name: 'Dr. Ayaz Mukarram Shaikh',
+          affiliation: 'Faculty of Agricultural and Food Sciences and Environmental Management, University of Debrecen, Debrecen, Hungary',
+          topic: 'Functional Foods & Nutraceutical Innovation',
+          bio: 'Dr. Ayaz Mukarram Shaikh is a food science and nutraceutical researcher focused on antimicrobial resistance mitigation through functional food technologies and wellness innovation.',
+          linkedin: 'https://www.linkedin.com/'
+        },
+        'ankit-seth': {
+          image: 'assets/img/speakers/speaker-2.jpeg',
+          name: 'Dr. Ankit Seth',
+          affiliation: 'Professor, Department of Microbiology and Biotechnology, Faculty of Sciences, University of British Columbia, Canada',
+          topic: 'AMR Research and Microbiome Science',
+          bio: 'Dr. Ankit Seth brings expertise in microbiology, biotechnology, and translational research for understanding resistance mechanisms and antimicrobial stewardship.',
+          linkedin: 'https://www.linkedin.com/'
+        },
+        'rajaraman-eri': {
+          image: 'assets/img/speakers/speaker-3-3.png',
+          name: 'Dr. Rajaraman Eri',
+          affiliation: 'Clinical Microbiology Specialist, Department of Clinical Microbiology, Christian Medical College, Vellore, India',
+          topic: 'Clinical Microbiology and Diagnostic Stewardship',
+          bio: 'Dr. Rajaraman Eri specializes in clinical microbiology, diagnostics, and antibiotic resistance surveillance in hospital infection settings.',
+          linkedin: 'https://www.linkedin.com/'
+        },
+        'vanu-gulati': {
+          image: 'assets/img/speakers/speaker-4.jpeg',
+          name: 'Dr. Vanu Gulati',
+          affiliation: 'Director, Antimicrobial Stewardship Program, Sir Ganga Ram Hospital, New Delhi, India',
+          topic: 'Antimicrobial Stewardship and Hospital Policy',
+          bio: 'Dr. Vanu Gulati focuses on stewardship policy, clinical antimicrobial governance, and evidence-based antibiotic use in hospital practice.',
+          linkedin: 'https://www.linkedin.com/'
+        },
+        'nitin-chitranshi': {
+          image: 'assets/img/speakers/speaker-5-5.png',
+          name: 'Dr. Nitin Chitranshi',
+          affiliation: 'Antimicrobial Resistance Researcher, National Institute of Biomedical Research, Jaipur, India',
+          topic: 'AMR Genomics and One Health Research',
+          bio: 'Dr. Nitin Chitranshi contributes to AMR research across surveillance, pathogen genomics, and the development of resilient public-health response systems.',
+          linkedin: 'https://www.linkedin.com/'
+        },
+        'mahendran-sekar': {
+          image: 'assets/img/speakers/speaker-6-6.png',
+          name: 'Dr. Mahendran Sekar',
+          affiliation: 'Head, Department of Pharmacy Practice, School of Pharmacy, Monash University Malaysia, Selangor, Malaysia',
+          topic: 'Pharmacy Practice, Pharmacovigilance and AMR Education',
+          bio: 'Dr. Mahendran Sekar leads pharmacy practice, clinical outcomes, and AMR education initiatives with a focus on patient-centered antimicrobial use.',
+          linkedin: 'https://www.linkedin.com/'
+        }
+      };
+
+      const params = new URLSearchParams(window.location.search);
+      const speakerKey = params.get('speaker');
+      const speaker = speakerDetails[speakerKey];
+
+      if (speaker) {
+        document.getElementById('speakerImage').src = speaker.image;
+        document.getElementById('speakerImage').alt = speaker.name;
+        document.getElementById('speakerName').textContent = speaker.name;
+        document.getElementById('speakerAffiliation').textContent = speaker.affiliation;
+        document.getElementById('speakerTopic').textContent = speaker.topic;
+        document.getElementById('speakerBio').textContent = speaker.bio;
+        document.getElementById('speakerLinkedin').href = speaker.linkedin;
+      } else {
+        document.getElementById('speakerImage').src = 'assets/img/speakers/speaker-1.jpeg';
+        document.getElementById('speakerImage').alt = 'Speaker not found';
+        document.getElementById('speakerName').textContent = 'Speaker details not available';
+        document.getElementById('speakerAffiliation').textContent = 'Please return to the speakers list and choose a valid speaker.';
+        document.getElementById('speakerTopic').textContent = '';
+        document.getElementById('speakerBio').textContent = '';
+        document.getElementById('speakerLinkedin').href = '#';
+      }
+    </script>
 
   </main>
 
